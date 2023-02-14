@@ -1,16 +1,16 @@
 import { useId, useState } from "react";
 
-import { GithubLogo, TwitterLogo, LinkedinLogo, ArrowArcRight } from "phosphor-react";
+import { ArrowArcRight } from "phosphor-react";
 
 import { ProjectProps, Project } from "./components/Project";
-import { FiverrLogo } from "./components/FiverrLogo"; 
 import { User } from "./components/User";
 import { Description } from "./components/Description";
 
-import { THEME, MY_PROJECTS  } from "./utils";
+import { THEME, MY_PROJECTS, MY_LINKS  } from "./utils";
 
 import ProfilePicture from "./assets/images/pfp.jpg";
 import { Email } from "./components/Email";
+import { SocialLinks } from "./components/SocialLinks";
 
 function App() {
     const [isFliped, setFliped] = useState<boolean>(false);
@@ -50,14 +50,7 @@ function App() {
                         <Description description="Motivated young programmer seeking freelance projects. 
                                             Experienced with MERN & LAMP. Committed to quality results." />
                         <Email email="rmotafreitas@gmail.com" />
-
-
-                        <div className="flex gap-4 items-center">
-                            <GithubLogo size={THEME.size.shape} color={THEME.colors.shape} />
-                            <TwitterLogo size={THEME.size.shape} color={THEME.colors.shape} />
-                            <LinkedinLogo size={THEME.size.shape} color={THEME.colors.shape} />
-                            <FiverrLogo size={THEME.size.shape} color={THEME.colors.shape} />
-                        </div> 
+                        <SocialLinks arrSociaLinks={MY_LINKS} />
 
                     </div>
 
