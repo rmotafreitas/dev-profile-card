@@ -1,4 +1,11 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from 'tailwind-config'; // <- This!
 
-export const { theme: THEME }: any = resolveConfig(tailwindConfig);
+const { theme }: any = resolveConfig(tailwindConfig);
+
+export const THEME = {
+    ...theme,
+    size: {
+        shape: 36,
+    }
+}

@@ -27,8 +27,8 @@ export const MY_PROJECTS: ProjectProps[] = [
         ],
         links: [
             {
-                website: "https://rmotafreitas.github.com/",
-                type: "Repository",
+                website: "https://github.com/",
+                type: "repository",
             }
         ]
     },
@@ -62,7 +62,7 @@ export const MY_PROJECTS: ProjectProps[] = [
         links: [
             {
                 website: "https://notes-share.vercel.app/",
-                type: "Website"
+                type: "website"
             }
         ]
     }

@@ -26,7 +26,7 @@ export function Project({ id, title, subtitle, description, image, arrTech, hand
         <div className="flex flex-col gap-4 shadow-md p-3 rounded-2xl">
             <div className="flex gap-1 items-center"> 
                 {image && (<img className="w-14 h-14 rounded-full border-shape border-2 mr-2" src={image} />)}
-                <div className="flex justify-between items-center w-full">
+                <div className="flex justify-between items-center w-full z-50">
                     <div className="flex flex-col">
                         <p className="text-xl text-primary-txt font-semibold">{title}</p>
                         <p className="text-lg text-primary-txt">{subtitle}</p>

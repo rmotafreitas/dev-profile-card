@@ -1,12 +1,21 @@
-import { HTMLAttributes } from "react";
+interface Props {
+    color: string;
+    size: number;
+};
 
-interface Props extends HTMLAttributes<HTMLOrSVGElement> {};
-
-export function FiverrLogo(svgAttrs: Props) {
+export function FiverrLogo({ color, size }: Props) {
     return (
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="256.000000pt" height="256.000000pt" viewBox="0 0 256.000000 256.000000"
-            preserveAspectRatio="xMidYMid meet" {...svgAttrs}>
+            preserveAspectRatio="xMidYMid meet" 
+            style={
+                {
+                    padding: 2,
+                    fill: color,
+                    width: size,
+                    height: size,
+                }
+            }>
 
             <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
             stroke="none">
