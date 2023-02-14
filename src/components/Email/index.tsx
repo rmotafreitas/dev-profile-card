@@ -4,6 +4,8 @@ interface Props {
 
 export function Email({ email }: Props) {
     return (
-        <a className="px-8 py-2 bg-shape text-white text-lg rounded-xl" target="_blank" href={`mailto:${email}`}>{email}</a>
+        <section className="px-4 py-2 bg-shape text-white text-lg rounded-xl">
+            <a target="_blank" href={`mailto:${email}`}>{email}</a>
+        </section>
     );
 }

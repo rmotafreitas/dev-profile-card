@@ -4,6 +4,8 @@ interface Props {
 
 export function Description({ description }: Props) {
     return (
-        <p className="text-center text-lg text-primary-txt">{description}</p>
+        <section>
+            <p className="text-center text-lg text-primary-txt">{description}</p>
+        </section>
     );
 }
