@@ -1,6 +1,6 @@
-import { Props as SocialLinkProps } from "../../components/SocialLink"; 
+import { UserProps } from "../../components/Card";
 
-export const MY_LINKS: SocialLinkProps[] = [
+export const MY_LINKS: UserProps['links'] = [
     {
        icon: "github",
        username: "rmotafreitas",

@@ -1,5 +1,5 @@
 import { THEME } from "../../utils";
-import { socialLinkMaker, SocialMediaInfo } from "../../utils/utils";
+import { socialLinkMaker, SocialMediaInfo } from "../../utils";
 
 export interface Props {
     icon: keyof typeof SocialMediaInfo, 

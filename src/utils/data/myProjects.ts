@@ -1,7 +1,7 @@
-import { ProjectProps } from "../../components/Project"
+import { UserProps } from "../../components/Card";
 import { ICONS, IMAGES } from "../index";
 
-export const MY_PROJECTS: ProjectProps[] = [
+export const MY_PROJECTS: UserProps['projects'] = [
     {
         id: 0,
         title: "Kaori Bot",
