@@ -1,18 +1,8 @@
-import { Globe, GithubLogo } from "phosphor-react";
-import { capitalize } from "../../utils";
+import { ProjectLink } from "../../@types/user";
+import { capitalize, ProjectButtonsIcons } from "../../utils";
 
-const ICONS = {
-    website: Globe,
-    repository: GithubLogo
-}
-
-export interface Props {
-    type: keyof typeof ICONS;
-    website: string;
-}
-
-export function ReferenceButton({ type, website }: Props) {
-    const IconComponent = ICONS[type];
+export function ReferenceButton({ type, website }: ProjectLink) {
+    const IconComponent = ProjectButtonsIcons[type];
 
     return (
         <a href={website} target="_blank" className="py-1 px-2 bg-shape rounded-lg flex items-center gap-2 text-white font-semibold text-xs">

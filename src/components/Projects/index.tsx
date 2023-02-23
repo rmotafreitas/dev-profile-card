@@ -1,10 +1,10 @@
 import { useId, useState } from "react";
-import { UserProps } from "../Card";
+import { UserProps } from "../../@types/user";
 import { Project } from "../Project";
 
 interface Props {
     sectionTitle: string;
-    arrProjects: UserProps['projects'];
+    arrProjects: UserProps['arrProjects'];
 }
 
 export function Projects({ sectionTitle, arrProjects }: Props) {

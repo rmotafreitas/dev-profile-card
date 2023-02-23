@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { Props as SocialLinkProps } from "../SocialLink"; 
-import { ProjectProps } from "../Project";
 import { ArrowArcRight } from "phosphor-react";
 import { THEME } from "../../utils";
 
@@ -11,18 +9,7 @@ import { Description } from "../Description";
 import { Email } from "../Email";
 import { SocialLinks } from "../SocialLinks";
 import { Projects } from "../Projects";
-
-export interface UserProps {
-    user: {
-        username: string;
-        role: string;
-    }
-    pic: string;
-    email: string; 
-    description: string; 
-    links: SocialLinkProps[]; 
-    projects: ProjectProps[]; 
-}
+import { UserProps } from "../../@types/user";
 
 interface Props {
     user: UserProps;
@@ -54,14 +41,14 @@ export function Card({ user }: Props) {
                     <ProfilePic pic={user.pic} isFliped={isFliped} /> 
                     <Description description={user.description} />
                     <Email email={user.email} />
-                    <SocialLinks arrSociaLinks={user.links} />
+                    <SocialLinks arrSociaLinks={user.arrLinks} />
 
                 </section>
 
                 {/* Back card */}
                 <section className="bg-card absolute h-full inset-0 w-full p-8 rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
 
-                    <Projects sectionTitle="Some projects" arrProjects={user.projects} />
+                    <Projects sectionTitle="Some projects" arrProjects={user.arrProjects} />
 
                 </section>
               

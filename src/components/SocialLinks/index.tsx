@@ -1,9 +1,9 @@
 import { useId } from "react";
-import { UserProps } from "../Card";
+import { UserProps } from "../../@types/user";
 import { SocialLink } from "../SocialLink";
 
 interface Props {
-    arrSociaLinks: UserProps['links'];
+    arrSociaLinks: UserProps['arrLinks'];
 }
 
 export function SocialLinks({ arrSociaLinks }: Props) {

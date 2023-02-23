@@ -1,5 +1,5 @@
 import { IMAGES, MY_LINKS, MY_PROJECTS } from "../"; 
-import { UserProps } from "../../components/Card";
+import { UserProps } from "../../@types/user";
 
 export const MY_USER: UserProps = {
     user: {
@@ -9,6 +9,6 @@ export const MY_USER: UserProps = {
     pic: IMAGES.Pfp, 
     email: "rmotafreitas@gmail.com",
     description: "Motivated young programmer seeking freelance projects. Experienced with MERN & LAMP. Committed to quality results.", 
-    links: MY_LINKS, 
-    projects: MY_PROJECTS 
+    arrLinks: MY_LINKS, 
+    arrProjects: MY_PROJECTS 
 }

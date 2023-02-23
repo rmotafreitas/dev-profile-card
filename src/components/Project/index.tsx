@@ -1,15 +1,4 @@
-import { Props as TechProps } from "../Chip";
-import { Props as LinksProps, ReferenceButton } from "../ReferenceButton";
-
-export interface ProjectProps {
-    id: number;
-    title: string;
-    subtitle: string;
-    description?: string;
-    image?: string;
-    arrTech?: TechProps[];
-    links?: LinksProps[]; 
-}
+import { ReferenceButton } from "../ReferenceButton";
 
 interface Props extends ProjectProps {
     handleArrowClick: (project: number) => void;
@@ -20,8 +9,9 @@ import { THEME } from "../../utils";
 import { CaretDown } from "phosphor-react";
 import { Chip } from "../Chip";
 import { useId } from "react";
+import { ProjectLinkProps, ProjectProps, TechProps } from "../../@types/user";
 
-export function Project({ id, title, subtitle, description, image, arrTech, handleArrowClick, isActive, links }: Props) {
+export function Project({ id, title, subtitle, description, image, arrTech, handleArrowClick, isActive, arrLinks }: Props) {
     return (
         <div className="flex flex-col gap-4 shadow-md p-3 rounded-2xl">
             <div className="flex gap-1 items-center"> 
@@ -46,8 +36,8 @@ export function Project({ id, title, subtitle, description, image, arrTech, hand
                     }
                 </div>
                 <div className="flex gap-2">
-                    {links &&
-                        links.map((link: LinksProps) => {
+                    {arrLinks &&
+                        arrLinks.map((link: ProjectLinkProps) => {
                             return (
                                 <ReferenceButton key={useId()} {...link} />
                             )
