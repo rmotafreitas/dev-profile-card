@@ -31,7 +31,8 @@ declare interface UserProps {
     user: {
         username: string;
         role: string;
-    }
+    };
+    url: string;
     pic: string;
     email: string; 
     description: string; 

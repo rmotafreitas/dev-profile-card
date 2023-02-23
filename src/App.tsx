@@ -1,9 +1,18 @@
-import { Card } from "./components/Card";
-import { MY_USER } from "./utils";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import { CardPage } from "./pages/CardPage";
 
 function App() {
+    // TODO: Make something like app.routes or routes folder
     return (
-        <Card user={MY_USER} />
+        <Router>
+            <Routes>
+                <Route path="/:userurl/:editmode?" element={<CardPage />} />
+            </Routes>
+        </Router>
     );
 }
 
