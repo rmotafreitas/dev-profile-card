@@ -2,6 +2,7 @@ import { THEME, TEXT_COLORS } from "./theme";
 import { ICONS, IMAGES } from "./assets";
 import { MY_PROJECTS, MY_LINKS, MY_USER } from "./data";
 import { capitalize, socialLinkMaker, SocialMediaInfo, ProjectButtonsIcons } from "./utils";
+import { db, getUserByUrl } from "./firestore.db";
 
 export { 
     THEME,
@@ -14,4 +15,7 @@ export {
     capitalize,
     socialLinkMaker,
     ProjectButtonsIcons,
-    SocialMediaInfo };
+    SocialMediaInfo,
+    db,
+    getUserByUrl
+};

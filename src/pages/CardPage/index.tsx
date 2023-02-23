@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { UserProps } from "../../@types/user";
 import { Card } from "../../components/Card";
-import { MY_USER } from "../../utils";
+import { getUserByUrl } from "../../utils";
 
 // TODO: CardPage to Card, conflict because we already have the Card component
 export function CardPage() {
+    const [user, setUser] = useState<UserProps | false | null>(false);
+
     // TODO: Typesafety in useParams, quick draft
     type CardPageParams = {
         userurl: string;
@@ -13,11 +17,22 @@ export function CardPage() {
         userurl
     } = useParams<CardPageParams>();
 
-    return (
-        userurl && userurl in MY_USER ? (
-            <Card user={MY_USER[userurl]} />
-        ) : (
-            <p>Err: User not found 404</p>
-        )
-    );
+    if (userurl) {
+        getUserByUrl(userurl).then((user: UserProps | null) => {
+            setUser(user);
+        });
+
+        return (
+            user != false ?
+                user != null ? (
+                    <Card user={user} />
+                ) : (
+                    <p>Err: User not found 404</p>
+                )
+            : (
+                <></>
+            )
+        );
+    }
+
 }

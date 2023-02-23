@@ -1,6 +1,6 @@
-import { UserProps } from "../../components/Card";
+import { UserProps } from "../../@types/user";
 
-export const MY_LINKS: UserProps['links'] = [
+export const MY_LINKS: UserProps['arrLinks'] = [
     {
        icon: "github",
        username: "rmotafreitas",

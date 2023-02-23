@@ -1,9 +1,8 @@
-import { UserProps } from "../../components/Card";
+import { UserProps } from "../../@types/user";
 import { ICONS, IMAGES } from "../index";
 
-export const MY_PROJECTS: UserProps['projects'] = [
+export const MY_PROJECTS: UserProps['arrProjects'] = [
     {
-        id: 0,
         title: "Kaori Bot",
         subtitle: "A chat bot for discord",
             description: "A anime bot for discord based on discord.js library.",
@@ -25,7 +24,7 @@ export const MY_PROJECTS: UserProps['projects'] = [
                 icon: ICONS.Express,
             }
         ],
-        links: [
+        arrLinks: [
             {
                 website: "https://github.com/",
                 type: "repository",
@@ -33,7 +32,6 @@ export const MY_PROJECTS: UserProps['projects'] = [
         ]
     },
     {
-        id: 1,
         title: "Notes Share",
         subtitle: "A mobile study application",
         description: "Take photos, enjoy an online dossier to save, organize and share your notes and jottings with your colleagues and friends.",
@@ -59,7 +57,7 @@ export const MY_PROJECTS: UserProps['projects'] = [
                 icon: ICONS.JS,
             },
         ],
-        links: [
+        arrLinks: [
             {
                 website: "https://notes-share.vercel.app/",
                 type: "website"

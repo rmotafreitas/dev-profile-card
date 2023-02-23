@@ -4,6 +4,7 @@
         content: [
             "./src/*.tsx",
             "./src/components/**/*.tsx",
+            "./src/pages/**/*.tsx",
             "./index.html"
         ],
         theme: {

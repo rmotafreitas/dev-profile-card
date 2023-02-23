@@ -1,5 +1,5 @@
 import { useId, useState } from "react";
-import { UserProps } from "../../@types/user";
+import { ProjectProps, UserProps } from "../../@types/user";
 import { Project } from "../Project";
 
 interface Props {
@@ -16,9 +16,9 @@ export function Projects({ sectionTitle, arrProjects }: Props) {
     return (
         <section className="flex flex-col gap-4 justify-center">
             <h1 className="text-3xl font-bold text-center text-primary-txt my-4">{sectionTitle}</h1>
-            {arrProjects.map((project: ArrayElement<typeof arrProjects>) => {
+            {arrProjects.map((project: ProjectProps, i: number) => {
                     return (
-                        <Project key={useId()} isActive={openDesc == project.id} handleArrowClick={handleProjectArrowClick} {...project} />
+                        <Project key={useId()} id={i} isActive={openDesc == i} handleArrowClick={handleProjectArrowClick} {...project} />
                     )
                 })
             }

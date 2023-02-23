@@ -18,7 +18,6 @@ declare interface TechProps {
 } 
 
 declare interface ProjectProps {
-    id: number;
     title: string;
     subtitle: string;
     description?: string;
@@ -27,6 +26,7 @@ declare interface ProjectProps {
     arrLinks?: ProjectLinkProps[]; 
 }
 
+// Todo: Define max values
 declare interface UserProps {
     user: {
         username: string;
@@ -37,6 +37,6 @@ declare interface UserProps {
     email: string; 
     description: string; 
     arrLinks: SocialLinkProps[]; 
-    arrProjects: ProjectProps[]; 
-} 
+    arrProjects: ProjectProps[3]; // Max 3 projects
+}
 

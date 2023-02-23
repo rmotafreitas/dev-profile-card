@@ -1,6 +1,7 @@
 import { ReferenceButton } from "../ReferenceButton";
 
 interface Props extends ProjectProps {
+    id: number;
     handleArrowClick: (project: number) => void;
     isActive: boolean;
 }

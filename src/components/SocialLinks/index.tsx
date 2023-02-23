@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { UserProps } from "../../@types/user";
+import { SocialLinkProps, UserProps } from "../../@types/user";
 import { SocialLink } from "../SocialLink";
 
 interface Props {
@@ -10,7 +10,7 @@ export function SocialLinks({ arrSociaLinks }: Props) {
     return (
         <section className="flex gap-4 items-center">
             {arrSociaLinks &&
-                arrSociaLinks.map((link: ArrayElement<typeof arrSociaLinks>) => {
+                arrSociaLinks.map((link: SocialLinkProps) => {
                     return (
                         <SocialLink key={useId()} {...link} />
                     );
