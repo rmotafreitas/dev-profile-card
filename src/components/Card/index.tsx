@@ -47,11 +47,8 @@ export function Card({ user }: Props) {
 
                 {/* Back card */}
                 <section className="bg-card absolute h-full inset-0 w-full p-8 rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
-
                     <Projects sectionTitle="Some projects" arrProjects={user.arrProjects} />
-
                 </section>
-              
             </div>
         </section>
     );

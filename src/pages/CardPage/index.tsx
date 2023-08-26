@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { UserProps } from "../../@types/user";
 import { Card } from "../../components/Card";
+import { LoadingCircle } from "../../components/LoadingCircle";
 import { getUserByUrl } from "../../utils";
 
 // TODO: CardPage to Card, conflict because we already have the Card component
@@ -30,9 +31,13 @@ export function CardPage() {
                     <p>Err: User not found 404</p>
                 )
             : (
-                <></>
+                <LoadingCircle />
             )
         );
+    } else {
+        const nav = useNavigate();
+        return <> { nav("/") } </>
     }
 
 }
+

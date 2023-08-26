@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import { CardPage } from "./pages/CardPage";
+import { CardPageEdit } from "./pages/CardPageEdit";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 
@@ -12,7 +13,8 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/:userurl/:editmode?" element={<CardPage />} />
+                <Route path="/:userurl" element={<CardPage />} />
+                <Route path="/:userurl/edit" element={<CardPageEdit />} />
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
