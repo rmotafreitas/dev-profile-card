@@ -36,7 +36,6 @@ export function Card({ user }: Props) {
 
                 {/* Front card */}
                 <section className="flex flex-col gap-5 items-center [backface-visibility:hidden]">
-                
                     <User {...user.user} />
                     <ProfilePic pic={user.pic} isFliped={isFliped} /> 
                     <Description description={user.description} />
